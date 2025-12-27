@@ -4653,26 +4653,7 @@ public class CategoryPlot<R extends Comparable<R>, C extends Comparable<C>>
     @Override
     public int hashCode() {
         int hash = super.hashCode();
-        hash = 71 * hash + Objects.hashCode(this.orientation);
-        hash = 71 * hash + Objects.hashCode(this.axisOffset);
-        hash = 71 * hash + Objects.hashCode(this.domainAxes);
-        hash = 71 * hash + Objects.hashCode(this.domainAxisLocations);
-        hash = 71 * hash + (this.drawSharedDomainAxis ? 1 : 0);
-        hash = 71 * hash + Objects.hashCode(this.rangeAxes);
-        hash = 71 * hash + Objects.hashCode(this.rangeAxisLocations);
-        hash = 71 * hash + Objects.hashCode(this.datasets);
-        hash = 71 * hash + Objects.hashCode(this.datasetToDomainAxesMap);
-        hash = 71 * hash + Objects.hashCode(this.datasetToRangeAxesMap);
-        hash = 71 * hash + Objects.hashCode(this.renderers);
-        hash = 71 * hash + Objects.hashCode(this.renderingOrder);
-        hash = 71 * hash + Objects.hashCode(this.columnRenderingOrder);
-        hash = 71 * hash + Objects.hashCode(this.rowRenderingOrder);
-        hash = 71 * hash + (this.domainGridlinesVisible ? 1 : 0);
-        hash = 71 * hash + Objects.hashCode(this.domainGridlinePosition);
-        hash = 71 * hash + Objects.hashCode(this.domainGridlineStroke);
-        hash = 71 * hash + Objects.hashCode(this.domainGridlinePaint);
-        hash = 71 * hash + (this.rangeZeroBaselineVisible ? 1 : 0);
-        hash = 71 * hash + Objects.hashCode(this.rangeZeroBaselineStroke);
+        hash = getHash(hash);
         hash = 71 * hash + Objects.hashCode(this.rangeZeroBaselinePaint);
         hash = 71 * hash + (this.rangeGridlinesVisible ? 1 : 0);
         hash = 71 * hash + Objects.hashCode(this.rangeGridlineStroke);
@@ -4703,6 +4684,30 @@ public class CategoryPlot<R extends Comparable<R>, C extends Comparable<C>>
         hash = 71 * hash + Objects.hashCode(this.fixedLegendItems);
         hash = 71 * hash + (this.rangePannable ? 1 : 0);
         hash = 71 * hash + Objects.hashCode(this.shadowGenerator);
+        return hash;
+    }
+
+    private int getHash(int hash) {
+        hash = 71 * hash + Objects.hashCode(this.orientation);
+        hash = 71 * hash + Objects.hashCode(this.axisOffset);
+        hash = 71 * hash + Objects.hashCode(this.domainAxes);
+        hash = 71 * hash + Objects.hashCode(this.domainAxisLocations);
+        hash = 71 * hash + (this.drawSharedDomainAxis ? 1 : 0);
+        hash = 71 * hash + Objects.hashCode(this.rangeAxes);
+        hash = 71 * hash + Objects.hashCode(this.rangeAxisLocations);
+        hash = 71 * hash + Objects.hashCode(this.datasets);
+        hash = 71 * hash + Objects.hashCode(this.datasetToDomainAxesMap);
+        hash = 71 * hash + Objects.hashCode(this.datasetToRangeAxesMap);
+        hash = 71 * hash + Objects.hashCode(this.renderers);
+        hash = 71 * hash + Objects.hashCode(this.renderingOrder);
+        hash = 71 * hash + Objects.hashCode(this.columnRenderingOrder);
+        hash = 71 * hash + Objects.hashCode(this.rowRenderingOrder);
+        hash = 71 * hash + (this.domainGridlinesVisible ? 1 : 0);
+        hash = 71 * hash + Objects.hashCode(this.domainGridlinePosition);
+        hash = 71 * hash + Objects.hashCode(this.domainGridlineStroke);
+        hash = 71 * hash + Objects.hashCode(this.domainGridlinePaint);
+        hash = 71 * hash + (this.rangeZeroBaselineVisible ? 1 : 0);
+        hash = 71 * hash + Objects.hashCode(this.rangeZeroBaselineStroke);
         return hash;
     }
 
